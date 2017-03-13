@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 9.3 </title>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<style>
+			#details {
+			}
+		</style>
+
+		<script>
+			$(document).ready(function() {
+				$("#submit").on("click", function() {
+					var uname = $("#usr").val();
+					var umail = $("#email").val();
+					if((uname == "") || (umail == "")) {
+						alert("Enter both the details");
+					} else {
+						$("#details").append("<tr><td>" + uname + "</td><td>" + umail + "</td></tr>");
+					}
+					
+				});
+			});
+		</script>
+	</head>
+	<body>
+	<center><h3> <b> Bootstrap - Assignment 9.3 </b> </h3>
+	</center>
+		<div class="container">
+			<form action="#">
+				<div class="form-group">
+					<label for="usr">Name:</label>
+				    	<input type="text" class="form-control" id="usr">
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+				        <input type="email" class="form-control" id="email">
+				</div>
+				<button type="button" class="btn btn-primary btn-lg" id="submit">
+					Submit
+				</button>
+			</form>
+			<br>
+			<table class="table table-striped" id="details">
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+				</tr>
+				
+			</table>
+</html>

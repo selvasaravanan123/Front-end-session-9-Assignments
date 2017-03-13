@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 2</title>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$("#save").on("click", function() {
+					var newName = $("#newName").val();
+					$("#usr").val(newName);
+				});
+			});
+		</script>
+	</head>
+	<body>
+	
+	<center><h3> <b> Bootstrap - Assignment 9.2 </b> </h3></center>
+		<div class="container">
+			<form>
+				<div class="form-group">
+					<label for="usr"> Your Name:</label>
+				    	<input type="text" class="form-control" id="usr">
+				</div>
+				<div class="form-group">
+					<label for="pwd">Enter Password:</label>
+				        <input type="password" class="form-control" id="pwd">
+				</div>
+				<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+					Change the Name
+				</button>
+			</form>
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			 	<div class="modal-dialog" role="document">
+					<div class="modal-content">
+			            		<div class="modal-header">
+				            		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					              		<span aria-hidden="true">&times;</span>
+						        </button>
+							<h4 class="modal-title" id="myModalLabel">Type the New Name</h4>
+						</div>
+						<div class="modal-body">
+       				          		<input type="text" class="form-control" id="newName"/>
+       					        </div>
+       						<div class="modal-footer">
+       							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       							<button type="button" class="btn btn-primary" id="save">Save changes</button>
+       						</div>
+       					</div>
+       				</div>
+       			</div>
+       
+</html>
